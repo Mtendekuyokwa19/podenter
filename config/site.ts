@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "ChartsMalawi",
+  name: "PodEnter",
   description: "A curated list of charts in malawi",
   navItems: [
     {
@@ -10,20 +10,12 @@ export const siteConfig = {
     },
 
     {
-      label: "All songs",
-      href: "/all_songs",
-    },
-    {
-      label: "categories",
-      href: "/categories",
-    },
-    {
-      label: "Blog",
-      href: "/blog",
-    },
-    {
       label: "About",
       href: "/about",
+    },
+    {
+      label: "Sign In",
+      href: "/blog",
     },
   ],
   navMenuItems: [
