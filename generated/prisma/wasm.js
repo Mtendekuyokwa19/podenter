@@ -123,7 +123,37 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
 exports.Prisma.UserScalarFieldEnum = {
   id: 'id',
   email: 'email',
-  name: 'name'
+  name: 'name',
+  phoneNumber: 'phoneNumber'
+};
+
+exports.Prisma.PaymentsScalarFieldEnum = {
+  id: 'id',
+  paymentStatus: 'paymentStatus',
+  userId: 'userId'
+};
+
+exports.Prisma.MembershipScalarFieldEnum = {
+  id: 'id',
+  subscribedWeeks: 'subscribedWeeks',
+  totalUsedHours: 'totalUsedHours',
+  totalAssignedWeekHours: 'totalAssignedWeekHours',
+  usedUpHours: 'usedUpHours',
+  insideUnipod: 'insideUnipod',
+  userId: 'userId'
+};
+
+exports.Prisma.ComplaintsScalarFieldEnum = {
+  id: 'id',
+  complaint: 'complaint',
+  userId: 'userId'
+};
+
+exports.Prisma.TimeScalarFieldEnum = {
+  id: 'id',
+  logintime: 'logintime',
+  logouttime: 'logouttime',
+  userId: 'userId'
 };
 
 exports.Prisma.SortOrder = {
@@ -143,7 +173,11 @@ exports.Prisma.NullsOrder = {
 
 
 exports.Prisma.ModelName = {
-  User: 'User'
+  User: 'User',
+  Payments: 'Payments',
+  Membership: 'Membership',
+  Complaints: 'Complaints',
+  Time: 'Time'
 };
 
 /**

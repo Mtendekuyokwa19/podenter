@@ -15,10 +15,14 @@ datasource db {
 }
 
 model User {
-        id       Int        @id @default(autoincrement())
-        email    String     @unique
-        name     String?
-        Payments Payments[]
+        id          Int          @id @default(autoincrement())
+        email       String       @unique
+        name        String?
+        phoneNumber String?
+        Payments    Payments[]
+        Membership  Membership[]
+        Complaints  Complaints[]
+        Time        Time[]
 }
 
 model Payments {
@@ -35,4 +39,23 @@ model Membership {
         totalUsedHours         Float
         totalAssignedWeekHours Float
         usedUpHours            Boolean
+        User                   User    @relation(fields: [userId], references: [id])
+        insideUnipod           Boolean
+        userId                 Int
+}
+
+model Complaints {
+        id        Int    @id @default(autoincrement())
+        complaint String
+        User      User   @relation(fields: [userId], references: [id])
+        userId    Int
+}
+
+model Time {
+        id         Int      @id @default(autoincrement())
+        user       User     @relation(fields: [userId], references: [id])
+        logintime  DateTime
+        logouttime DateTime
+
+        userId Int
 }
